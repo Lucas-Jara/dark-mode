@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="mode-tag"></div>
+    <div class="container">
+        <div class="dark-mode"></div>
+    </div>
+    <h1>DARK MODE</h1>
+
+
+    <script>
+        const modeToggle = document.querySelector('.mode-tag');
+        const darkMode = document.querySelector('.dark-mode');
+        const h1 = document.querySelector('H1');
+
+        modeToggle.addEventListener('click', ()=>{
+            darkMode.classList.toggle('active');
+            modeToggle.classList.toggle('active');
+            h1.classList.toggle('active');
+        })
+    </script>
+
+</body>
+
+</html>

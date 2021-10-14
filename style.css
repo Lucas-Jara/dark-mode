@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mode-tag {
+    background-color: #000;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 5;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+.mode-tag.active {
+    background-color: #fff;
+    transition: 1s ease-in-out;
+}
+
+.container {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.dark-mode {
+    position: relative;
+    transform: scale(0);
+    inset: 0px;
+    width: 250vw;
+    height: 350vh;
+    border-radius: 50%;
+    background-color: #161616;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.dark-mode.active {
+    transform: scale(1);
+}
+
+h1 {
+    color: #000;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s ease-in-out;
+    font-size: 2rem;
+}
+
+h1.active {
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .dark-mode {
+        width: 250vw;
+        height: 250vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+}
